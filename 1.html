@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaca Polaca</title>
+</head>
+<body>
+
+  <br><br> 
+   
+   <button id="botonVideo" type="button">Presioname por favor</button> 
+   <video 
+ id="miVideo"
+ src="Lavacaquebailaauauau.mp4"
+ controls 
+ width="560" 
+ height="315">
+</video> 
+
+
+<script>
+ const boton = document.getElementById('botonVideo');
+ const video = document.getElementById('miVideo');
+
+boton.addEventListener('click', function() {
+    if (confirm('¿Estás seguro de que quieres presionar el botón?')) {
+        video.style.display = 'block';
+        video.play().catch(() => {
+            // El navegador puede bloquear play automático; igual se muestra el video
+        });
+    } else {
+        alert('Fuck you bich ');
+    }
+});
+</script>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    gap: 20px;
+  }
+  
+  body{
+    background-color: #000000;
+  }
+  button {
+    background-color: red;
+    border: 8px solid black;
+    color: #000000;
+    padding: 15px 32px;
+    font-size: 60px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  button:hover {
+    background: rgb(97, 6, 6);
+  }
+
+  #miVideo {
+    display: none;
+    margin-top: 10px;
+  }
+</style>
+
+</body> 
